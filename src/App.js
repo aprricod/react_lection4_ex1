@@ -12,7 +12,7 @@ class App extends React.PureComponent {
     this.counter++;
     console.log(this.counter, "!!!");
   }
-  render() {
+  render = () => {
     const { name } = this.props;
     return (
       <div className="App">
@@ -20,7 +20,7 @@ class App extends React.PureComponent {
         <button onClick={this.press}>Кнопка</button>
       </div>
     );
-  }
+  };
 }
 
 export default App;
