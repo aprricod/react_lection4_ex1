@@ -3,10 +3,6 @@ import "./App.css";
 
 class App extends React.PureComponent {
   counter = 0;
-  constructor(props) {
-    super(props);
-    this.press = this.press.bind(this);
-  }
 
   press = (name, age, bool) => {
     this.counter++;
