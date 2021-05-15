@@ -6,11 +6,15 @@ class App extends React.PureComponent {
 
   constructor(props) {
     super(props);
-    this.state = { hw: "Hello world!" };
+    this.state = { hw: "Hello world!", hw2: "Hello world 2" };
   }
 
   press = (name, age, bool) => {
-    this.counter++;
+    // this.counter++;
+    const hw = this.state.hw + "!";
+    // this.setState({ ...this.state, hw });
+    this.setState({ hw });
+
     // console.log(this.counter, "Нажали кнопку");
     console.log(name, bool ? age : "");
   };
@@ -21,6 +25,7 @@ class App extends React.PureComponent {
       <div className="App">
         {/* <p>Hello {name}</p> */}
         <p>{this.state.hw}</p>
+        <p>{this.state.hw2}</p>
         <button onClick={(e) => this.press("Artem", 30, true)}>Нажми</button>
 
         <button onClick={(e) => this.press(name, age, bool)}>Нажми tot</button>
