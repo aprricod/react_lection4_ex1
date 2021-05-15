@@ -4,6 +4,11 @@ import "./App.css";
 class App extends React.PureComponent {
   counter = 0;
 
+  constructor(props) {
+    super(props);
+    this.state = { hw: "Hello world!" };
+  }
+
   press = (name, age, bool) => {
     this.counter++;
     // console.log(this.counter, "Нажали кнопку");
@@ -11,11 +16,14 @@ class App extends React.PureComponent {
   };
 
   render() {
-    const { name } = this.props;
+    const { name, age, bool } = this.props;
     return (
       <div className="App">
-        <p>Hello {name}</p>
+        {/* <p>Hello {name}</p> */}
+        <p>{this.state.hw}</p>
         <button onClick={(e) => this.press("Artem", 30, true)}>Нажми</button>
+
+        <button onClick={(e) => this.press(name, age, bool)}>Нажми tot</button>
       </div>
     );
   }

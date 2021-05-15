@@ -6,7 +6,10 @@ import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App name="Artem" />
+    <App name="Artem" age={30} bool={true} />
+    {/* если пишем bool то значит он равен true */}
+    <App name="Artem" age={30} bool={false} />
+    {/* если не пишет bool значит он равен false */}
   </React.StrictMode>,
   document.getElementById("root")
 );
