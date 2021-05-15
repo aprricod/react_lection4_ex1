@@ -8,19 +8,21 @@ class App extends React.PureComponent {
     this.press = this.press.bind(this);
   }
 
-  press() {
+  press = (name, age, bool) => {
     this.counter++;
-    console.log(this.counter, "!!!");
-  }
-  render = () => {
+    // console.log(this.counter, "Нажали кнопку");
+    console.log(name, bool ? age : "");
+  };
+
+  render() {
     const { name } = this.props;
     return (
       <div className="App">
-        <p>Hello world {name}</p>
-        <button onClick={this.press}>Кнопка</button>
+        <p>Hello {name}</p>
+        <button onClick={(e) => this.press("Artem", 30, true)}>Нажми</button>
       </div>
     );
-  };
+  }
 }
 
 export default App;
